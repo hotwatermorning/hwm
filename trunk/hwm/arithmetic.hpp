@@ -226,9 +226,6 @@ namespace hwm { namespace arithmetic {
     double  fdiv_truncated          (double dividend, double divisor)
     {
         BOOST_ASSERT(divisor != 0);
-    
-        bool const is_divisor_negative  = divisor < 0;
-
         double const division = (detail::abs_switch(dividend) / detail::abs_switch(divisor));
         return
             floor(division) *
