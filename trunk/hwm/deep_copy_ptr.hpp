@@ -57,10 +57,10 @@ public:
     }
     
     virtual std::auto_ptr<base_type>
-                        clone       () const    { return std::auto_ptr<base_type>(new this_type(clone_detail())); }
+                            clone       () const    { return std::auto_ptr<base_type>(new this_type(clone_detail())); }
 
-    virtual void*       get_ptr     ()          { return ptr_.get(); }
-    virtual const void* get_ptr     () const    { return ptr_.get(); }
+    virtual void *          get_ptr     ()          { return ptr_.get(); }
+    virtual const void *    get_ptr     () const    { return ptr_.get(); }
 };
 
 }   //namespace detail
