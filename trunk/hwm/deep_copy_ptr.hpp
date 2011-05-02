@@ -75,6 +75,9 @@ class deep_copy_ptr
     ,   public boost::equality_comparable< deep_copy_ptr<T> >
 {
 public:
+    typedef deep_copy_ptr<T>    this_type;
+    
+public:
     //! @brief Default constructor
     deep_copy_ptr               () : holder_(new detail::deep_copy_ptr_holder<T>(0)) {}
 
@@ -155,7 +158,6 @@ public:
     }
 
 private:
-    typedef deep_copy_ptr<T>    this_type;
     std::auto_ptr<detail::deep_copy_ptr_holder_base> holder_;
 };
 
